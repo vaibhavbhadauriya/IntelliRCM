@@ -1,0 +1,29 @@
+{
+    "name": "intellircm/website",
+    "description": "IntelliRCM - Professional Revenue Cycle Management Website",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IntelliRCM\\": "backend/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"copy('backend/config.example.php', 'backend/config.php');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
